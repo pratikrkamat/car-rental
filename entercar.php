@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php 
+include('session_supplier.php'); 
+?>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,7 +35,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="booking-form">
-						<form>
+						<form role="form" action="entercar1.php" method="POST" enctype="multipart/form-data">
 							<!-- <div class="form-group">
 								<div class="form-checkbox">
 									<label for="roundtrip">
@@ -53,81 +55,53 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<span class="form-label">Name</span>
-										<input class="form-control" type="text" placeholder="Enter your name.." required>
+										<span class="form-label">Car Model</span>
+										<input class="form-control" type="text" name="car_model" placeholder="Enter car Model" required >
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<span class="form-label">Email</span>
-										<input class="form-control" type="email" placeholder="enter your email.." required>
+										<span class="form-label">Car Number</span>
+										<input class="form-control" type="number" name="car_no" placeholder="Enter car no" required>
 									</div>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<span class="form-label">Phone Number</span>
-										<input class="form-control" type="text" placeholder="phone number" required>
+										<span class="form-label">Type</span>
+										<input class="form-control" type="text" name="car_type" placeholder="Car type" required>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<span class="form-label">Document for verification</span>
-										<select class="form-control">
-											<option>drivers License</option>
-											<option>Aadhar car</option>
-											<option>Pan card</option>
-										</select>
-										<span class="select-arrow"></span>
+										<span class="form-label">Car color</span>
+										<input class="form-control" type="text" name="car_color" placeholder="Car color" required>
+				
 									</div>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-md-3">
 									<div class="form-group">
-										<span class="form-label">Issue</span>
-										<input class="form-control" type="date" required>
+										
+										<input class="form-control" type="file" name="car_img" placeholder="Enter Car image" required>
 									</div>
 								</div>
 								<div class="col-md-3">
 									<div class="form-group">
-										<span class="form-label">Returning</span>
-										<input class="form-control" type="date" required>
+									
+										<input class="form-control" type="number" name="car_price" placeholder="Enter Car Price">
 									</div>
 								</div>
-								<div class="col-md-3">
-									<div class="form-group">
-										<span class="form-label">Car Type</span>
-										<select class="form-control">
-											<option>Choose car type..</option>
-											<option>Sedan</option>
-											<option>Coupe</option>
-											<option>Hatchback</option>
-											<option>Minivan</option>
-											<option>other</option>
-										</select>
-										<span class="select-arrow"></span>
-									</div>
-								</div>
-								<div class="col-md-3">
-									<div class="form-group">
-										<span class="form-label">Mode Of Payment</span>
-										<select class="form-control">
-											<option>Debit/Credit card</option>
-											<option>Net Banking</option>
-											<option>UPI</option>
-											<option>Cash</option>
-										</select>
-										<span class="select-arrow"></span>
-									</div>
-								</div>
-							</div>
+							
+								
+					
 							<div class="row">
 								
 								<div class="col-md-3">
 									<div class="form-btn">
-										<button class="submit-btn">Book Now</button>
+										<button class="submit-btn" name="submit">Submit</button>
 									</div>
 								</div>
 							</div>
@@ -137,6 +111,6 @@
 			</div>
 		</div>
 	</div>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body>
 
 </html>
